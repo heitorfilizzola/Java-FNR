@@ -38,6 +38,7 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
     // O mesmo serve para fazer cálculos matemáticos
 
         System.out.println(3+3);// Soma
+        System.out.println(3-3);// Subtração
         System.out.println(2*5);// Multiplicação
         System.out.println(4/2);// Divisão
         System.out.println(25%4);// Resto da divisão
@@ -202,6 +203,7 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
     }
 
 // Operadores Relacionais:
+// Sempre retornam "true" ou "false"
 
     /*
      * ==  -> igual
@@ -220,5 +222,88 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
      * &&  -> e
      * ^   -> se forem diferentes (Disjunção exclusiva)
      */
+
+
+
+//ASSUNTO NÃO VISTO NA FACULDADE
+
+// Operadores Aritiméticos:
+
+        System.out.println(3--);// Subtrai 1 do valor da
+        System.out.println(3++);// Adiciona 1 ao valor da variável
+
+// Operadores de Atribuição:
+
+        x = 5       // equivalente a: x = 5
+        x += 3      // equivalente a: x = x + 3
+        x -= 3      // equivalente a : x = x - 3
+        x *= 3      // equivalente a: x = x * 3
+        x /= 3      // equivalente a: x = x / 3
+        x %= 3      // equivalente a: x = x % 3
+        x &= 3      // equivalente a: x = x & 3
+        x |= 3      // equivalente a: x = x | 3
+        x ^= 3      // equivalente a: x = x ^ 3
+        x >>= 3      // equivalente a: x = x >> 3
+        x <<= 3      // equivalente a: x = x << 3
+
+
+// Identificadores:
+
+        /* 
+        *Todas as variáveis devem ser identificadas com um nome único, esses nomes únicos são chamados de identificadores ou "identifiers".
+        *Os identificadores podem ser nomes curtos (x e y) ou nomes mais descritivos (idade,volumeTotal). É recomendado o uso de nomes descritivos para poder criar um código mais entendivel
+        */
+
+// Data Types:
+
+        // Como ja explicado anteriormente, uma variável em java deve ter seu tipo definido. Esses tipos podem ser definidos em 2 grupos:
+
+        /*
+        * Primitive data types: inclue byte, short, int, long, float, double, boolean e char.
+        * 
+        * byte = 1 byte -> números de inteiros de -128 até 127.
+        * short = 2 bytes -> números inteiros de -32,768 até 32,767.
+        * int = 4 bytes -> números inteiros de -2,147,483,648 até 2,147,483,647.
+        * long = 8 bytes -> números inteiros de -9,223,372,036,854,775,808 até 9,223,372,036,854,775,807.
+        * 
+        *  float = 4 bytes -> números quebrados, suficiente para guardar de 6 a 7 digitos decimais.
+        *  double = 8 bytes -> números quebrados, suficiente para guardar até 15 digitos decimais.
+        *  boolean = 1 bit -> guarda valores verdadeiros ou falsos.
+        *  char = 2 bytes -> guarda um caractér/letra único ou valores ASCII
+        * 
+        * 
+        * Non-primitive data types(reference types): Inclue String, Arrays e classes.
+        * 
+        * São denominados como reference types pelo fato de que eles se referem a objetos, a principal diferença entre primitivos e não primitivos é:
+        * 1- Primitivos são predefinidos (Já definidos) em java, já os não primitivos não é definido pelo Java, são criados pelo programador (exeto para String).
+        * 2- Não primitivos podem ser usados para referir um método para realizar certas operações, enquanto primitivos não.
+        * 3- Um primitivo sempre possue um valor, enquanto um não primitivo podem ser "null" ou nulos.
+        * 4- Um primitivo começa com letra minúscula, enquanto os não primitivos começam com letras maiúsculas.
+        */
+
+// Fundição de tipos:
+
+        /* 
+        * Aumentando(Automaticamente): Convertendo um tipo menor para um tipo de maior tamanho:
+        * byte -> float -> char -> int -> long -> float -> double
+        */
+
+       int meuInt = 9;
+       double meuDouble = meuInt; // Fundição automática: int para double.
+
+        System.out.println(meuInt);     // Saída: 9
+        System.out.println(meuDouble);  // Saída: 9.0
+
+        /*
+        * Diminuindo(Manualmente): Convertendo um tipo maior para um tipo menor tamanho:
+        * double -> float -> long -> int -> char -> short -> byte
+        */
+
+       double meuDouble1 = 9.78d;
+        //Obs: O sufixo "d" no final do número serve para deixar literal ao compilador que o número se trata de um double e evitar possiveis erros de compilação.
+       int meuInt1 = (int) meuDuble1;
+
+       System.out.println(meuDouble1);      // Saída: 9.78
+       System.out.println(meuInt1);         //Saída: 9
 
 }
