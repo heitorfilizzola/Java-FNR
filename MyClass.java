@@ -1,10 +1,6 @@
-/*
-*    Código de Revisão para prova N1
-*    Cadeira: Pensamento computacional e algorítimos
-*    Java
- */
-import java.util.Scanner;
 
+<<<<<<< HEAD
+=======
 // Iniciaremos primeiramente com o básico "Hello Word"
 
 public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma classe, a qual nomeamos como "MyClass". Uma classe sempre deve se iniciar com uma letra maiúscula.
@@ -259,7 +255,7 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
         // Como ja explicado anteriormente, uma variável em java deve ter seu tipo definido. Esses tipos podem ser definidos em 2 grupos:
 
         /*
-        * Primitive data types: inclue byte, short, int, long, float, double, boolean e char.
+        * Primitive data types: inclui byte, short, int, long, float, double, boolean e char.
         * 
         * byte = 1 byte -> números de inteiros de -128 até 127.
         * short = 2 bytes -> números inteiros de -32,768 até 32,767.
@@ -272,7 +268,7 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
         *  char = 2 bytes -> guarda um caractér/letra único ou valores ASCII
         * 
         * 
-        * Non-primitive data types(reference types): Inclue String, Arrays e classes.
+        * Non-primitive data types(reference types): Inclui String, Arrays e classes.
         * 
         * São denominados como reference types pelo fato de que eles se referem a objetos, a principal diferença entre primitivos e não primitivos é:
         * 1- Primitivos são predefinidos (Já definidos) em java, já os não primitivos não é definido pelo Java, são criados pelo programador (exeto para String).
