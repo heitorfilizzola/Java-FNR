@@ -1,6 +1,3 @@
-
-<<<<<<< HEAD
-=======
 // Iniciaremos primeiramente com o básico "Hello Word"
 
 import java.util.Scanner; // Importa a biblioteca do Scanner utilizado mais a frente
