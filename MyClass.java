@@ -559,4 +559,54 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
                 System.out.println("Ansioso para o fim de semana")
         }
         // Saída: "Ansioso para o fim de semana".
+
+// Loop em Java utilizando While:
+
+    /* Um loop consegue executar um bloco de código enquanto a condição especificada for verdadeira, loops são 
+    muito úteis pelo fato de que eles economizam tempo, reduzem erros e tornam o codigo mais legivel.*/
+
+    // Um loop while roda um bloco de código enquanto a condição especificada for verdadeira.
+
+        while(condicao) {
+            // Bloco de código a ser executado
+        }
+
+    // Exemplo 7:
+
+        System.out.println()
+        System.out.println("Exemplo Nº7:")
+
+        int i = 0;
+        while (i < 5){
+            System.out.println(i);
+            i++;
+        }
+        
+    // O codigo acima vai rodar o loop enquanto que a variavel (i) for menor que 5
+
+// Loop Do/while
+
+    /* O do/while é uma variante do comando while, esse loop vai executar o bloco de código antes de checar 
+    se a condição é verdadeira, então repetirá o loop enquanto a condição for verdadeira.*/
+
+        do{
+            // Bloco de código
+        }
+        while(condicao);
+
+    // Exemplo 8:
+
+        System.out.println()
+        System.out.println("Exemplo Nº8:")
+
+        int i = 0;
+        do {
+            System.out.println(i);
+            i++;
+        }
+        while (i < 5);
+
+// Loop For em Java
+
+
 }
