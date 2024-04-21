@@ -3,6 +3,8 @@
 =======
 // Iniciaremos primeiramente com o básico "Hello Word"
 
+import java.util.Scanner; // Importa a biblioteca do Scanner utilizado mais a frente
+
 public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma classe, a qual nomeamos como "MyClass". Uma classe sempre deve se iniciar com uma letra maiúscula.
                        * Obs: O nome da classe deve ser SEMPRE o mesmo do nome do arquivo, no qual nesse caso seria "MyClass.java".*/
     
@@ -219,6 +221,14 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
      * ^   -> se forem diferentes (Disjunção exclusiva)
      */
 
+// Expressões booleanas:
+
+    //Expressões que retornam como resultado valores booleanos: true ou false.
+
+    int x = 10;
+    int y = 9;
+    System.out.println(x > y); // Saída: true, pois 10 é maior que 9
+
 
 
 //ASSUNTO NÃO VISTO NA FACULDADE
@@ -230,17 +240,17 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
 
 // Operadores de Atribuição:
 
-        x = 5       // equivalente a: x = 5
-        x += 3      // equivalente a: x = x + 3
-        x -= 3      // equivalente a : x = x - 3
-        x *= 3      // equivalente a: x = x * 3
-        x /= 3      // equivalente a: x = x / 3
-        x %= 3      // equivalente a: x = x % 3
-        x &= 3      // equivalente a: x = x & 3
-        x |= 3      // equivalente a: x = x | 3
-        x ^= 3      // equivalente a: x = x ^ 3
-        x >>= 3      // equivalente a: x = x >> 3
-        x <<= 3      // equivalente a: x = x << 3
+        //x = 5        equivalente a: x = 5
+        //x += 3       equivalente a: x = x + 3
+        //x -= 3       equivalente a : x = x - 3
+        //x *= 3       equivalente a: x = x * 3
+        //x /= 3       equivalente a: x = x / 3
+        //x %= 3       equivalente a: x = x % 3
+        //x &= 3       equivalente a: x = x & 3
+        //x |= 3       equivalente a: x = x | 3
+        //x ^= 3       equivalente a: x = x ^ 3
+        //x >>= 3       equivalente a: x = x >> 3
+        //x <<= 3       equivalente a: x = x << 3
 
 
 // Identificadores:
@@ -302,4 +312,254 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
        System.out.println(meuDouble1);      // Saída: 9.78
        System.out.println(meuInt1);         //Saída: 9
 
+// Tamanho de uma string:
+
+        /*
+        * Uma string é na verdade um objeto, no qual contem métodos que podem que podem realizar certas operações.
+        * Por exemplo, temos o tamanho da string, que pode ser encontrado utilizando a função "length()":
+        */
+
+       String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       System.out.println("O tamanho da string é: " + txt.length());
+
+// Outros comando com strings:
+
+    String txt = "Hello World";
+    System.out.println(txt.toUpperCase()); // Saída: "HELLO WORLD"
+    System.out.println(txt.toLowerCase()); // Saída: "hello world"
+
+    // Encontrando algo em uma string:
+
+    String txt = "Please locate where 'locate' occurs!";
+    System.out.println(txt.indexOf("locate")); // Saída: 7
+
+// Contatenação de uma String:
+
+    // O operador pode ser usado entre strings para conseguir combinar-las, assim como com os outros tipos de variáveis. Isso é chamado cotatenação.
+
+    String primeiroNome = "João";
+    String segundoNome = "Pedro";
+    System.out.println(primeiroNome + " " + segundoNome); // saída: João Pedro
+
+    // Note que foi adicionado um texto vazio (" ") para criar um espaço entre o primeiro e o segundo nome na saída.
+
+    // Você também pode utilizar o "concat()" para contatenar duas strings:
+
+    String primeiroNome = "João ";
+    String segundoNome = "Pedro";
+    System.out.println(primeiroNome.concat(segundoNome)); 
+
+    // Obs: Java usa o operador "+" para adição e contatenação. Números são somados e Strings são contatenadas.
+
+// Caractéres especiais em Strings:
+
+    /*
+    * Em Java devemos utilizar caractéres especiais para representar aspas simpes, aspas duplas e barra invertida em uma string pelo fato de que
+    * uma string é escrita entre aspas duplas, logo seria retornado um erro ao utilizar esses caractéres dentro de uma.
+     */
+
+        /* 
+        *   \'    ->    '
+        *   \"    ->    "
+        *   \\    ->    \
+         */
+
+    // A sequência \" insere uma aspas dupla em uma string:
+
+    String txt = "Nós somos assim chamados \"Vikings\" vindos do norte.";
+
+    // A sequência \' insere uma aspas simples em uma string:
+
+    String txt = "It\'s alright.";
+
+    // A sequência \\ insere uma barra invertida em uma string:
+
+    String txt = "O caractére \\ é chamado de barra invertida.";
+
+// Outras sequências comuns que são válidas em Java são:
+
+    /*
+    * \n    -> Nova linha.
+    * \r    -> Carriage Return (Ato de voltar ao inicio da linha seguinte, possui basicamente a mesma função do \n, porém é uma forma de utilização mais antiga.).
+    * \t    -> Tab (Funciona da mesma forma que a tecla "tab" em um editor de texto. Adiciona um espaço grande).
+    * \b    -> Backspace (Funciona da mesma forma que a tecla "Backspace" do teclado, ou a tecla de apagar).
+    * \f    -> Form Feed (Serve como "Quebra de página", utilizado para indicar o fim de uma página ou documento e vai para o inicio de outro).
+    */
+
+// Matemática em Java:
+
+    //Math.max(x,y):
+
+        // A função Math.max(x,y) é utilizada para encontrar o maior valor de x e y:
+
+        Math.max(5,10); // saída: 10
+
+    //Math.min(x,y):
+
+        // A função Math.min(x,y) é utilizada para encontrar o menor valor de x e y:
+
+        Math.min(5,10); // saída: 5
+
+    //Math.sqrt(x):
+
+        // A função Math.sqrt(x) é utilizada para mostrar a raiz quadrada de x:
+
+        Math.sqrt(64); // saída: 8.0
+
+    //Math.abs(x):
+
+        // A função serve para retornar o valor absoluto (positivo) do valor de x:
+
+        Math.abs(-4.7); // saída: 4.7
+
+    //Math.random():
+
+        // Retorna um número aleatório entre 0.0 (Inclusivo), e 1.0 (Exclusivo):
+
+        Math.random(); // saída: Número aleatório entre 0.0 e 1.0
+
+        /* Para ter mais controle sobre o número aleatório, por exemplo, se você so quer um número aleatório entre 0 e 100, você pode usar
+        a seguinte fórmula:*/
+
+        int numAleatorio = (int)(Math.random() * 101); // 0 a 100
+
+// If ... Else em Java
+
+    // if
+
+        // Utiliza-se o if para especificar um bloco de código a ser executado se a condição for verdadeira.
+
+        if (condicao) {
+            // Bloco de código a ser executado se a condição for verdadeira
+        }
+
+        // Obs: O if é utilizado em letras minúsculas. Se forem utilizadas letras maiúsculas será gerado um erro em seu cõdigo.
+
+    // else
+
+        // Utiliza-se para especificar o bloco de código a ser executado caso a condição seja falsa.
+
+        if (condicao) {
+            // Bloco de código a ser executado se a condição for verdadeira
+        } else {
+            // Bloco de código a ser executado se a condição for falsa
+        }
+
+    // else if
+
+        // Utiliza-se para especificar uma nova condição se a primeira condição for falsa
+
+        if (condicao1) {
+            // Bloco de código a ser executado se a condição 1 for verdadeira
+        } else if (condicao2) {
+            // Bloco de código a ser executado se a condição 1 for falsa e a condição 2 for verdadeira
+        } else {
+            // Bloco de código a ser executado se a condição 1 for falsa e a condição 2 for falsa
+        }
+
+            // Exemplo 6
+
+	            System.out.println();
+	            System.out.println("Exemplo Nº6: ");
+
+	            int hora = kb.nextInt();
+	            if (6 < hora && hora < 12){
+	                System.out.println("Bom dia");
+	            } else if (12 < hora && hora < 18){
+		                System.out.println("Boa tarde");
+	            } else if(18< hora && hora < 00){
+	                    System.out.println("Boa noite");
+	            } else {
+		                System.out.println("Boa madrugada");
+                }
+
+            // Se a hora maior que 6 e menor que 12, saída: Bom dia
+            // Se a hora maior que 12 e menor que 18, saída: Boa tarde
+            // Se a hora maior que 18 e menor que 00, saída: Boa noite
+            // Se todos anteriores forem falsos, então, saída: Boa madrugada
+
+    // forma curta de se escrever if ... else
+
+        // Existe também a forma curta do if else, que é conhecida como operador ternario, pelo fato que consiste em 3 operandos.
+
+        // Pode ser usado para substituir multiplas linhas de codigo com uma única linah, e geralmente usado para substituir utilizações simples de if else:
+
+        //variavel = (condicao) ? expressaoVerdade : expressaoFalsa;
+
+            // Invés de escrever:
+
+                int hora = 20
+                if (hora < 18) {
+                    System.out.println("Bom dia.");
+                } else {
+                    System.out.println("Boa noite.");
+                }
+
+            // Pode-se escrever:
+
+            Int hora = 20
+            String resultado = (hora < 18) ? "Bom dia." : "Boa noite.";
+            System.out.println(resultado);
+
+// Switch em Java
+
+    // Invés de escrever vários if..else, você pode usar a declaração switch.
+
+    // A declaração switch seleciona um de vários blocos de código para serem executados:
+
+        switch(expressao) {
+            case x:
+                // bloco de código
+                break;
+            case y:
+                // bloco de código
+                break;
+            dafault:
+                // bloco de código
+        } 
+
+    // O valor da expressão é comparado com os valores de cada case. Caso os valores sejam iguais, o bloco de código associado é executado.
+    // Quando o compilador java atinje o break, isso para a execução do switch. Assim parando a execução de mais códigos e testes de case dentro do bloco.
+    // Quando uma correspondência da expressão com o case é encontrada e o trabalho é feito, é hora de parar, pelo fato que não existe mais nada que seja necessário de testar.
+
+        int dia = 4;
+        switch(dia){
+            case 1:
+                System.out.println("Segunda");
+                break;
+            case 2:
+                System.out.println("Terça");
+                break;
+            case 3:
+                System.out.println("Quarta");
+                break;
+            case 4:
+                System.out.println("Quinta");
+                break;
+            case 5:
+                System.out.println("Sexta");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+        }
+        // Saída: "Quinta" (dia 4)
+
+    // O default especifica o bloco de código a ser executado caso não haja nenhuma correspondência com os "case".
+
+        int dia = 4;
+        switch(dia){
+            case 6:
+                System.out.println("Hoje é Sábado");
+                break;
+            case 7:
+                System.out.println("Hoje é Domingo");
+                break;
+            default:
+                System.out.println("Ansioso para o fim de semana")
+        }
+        // Saída: "Ansioso para o fim de semana".
 }
