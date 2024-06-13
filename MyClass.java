@@ -543,6 +543,16 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
                 System.out.println("Domingo");
                 break;
         }
+
+
+        if (dia == 5){
+            System.out.println("sexta")
+        } else if ( dia == 6) {
+            System.out.println("sexta")
+        }
+
+
+
         // Saída: "Quinta" (dia 4)
 
     // O default especifica o bloco de código a ser executado caso não haja nenhuma correspondência com os "case".
@@ -607,6 +617,161 @@ public class MyClass{ /*  Todo código que roda em java deve estar dentro de uma
         while (i < 5);
 
 // Loop For em Java
+    
+    /*  Quando você sabe exatamente quantas vezes vai ser executado o loop pelo bloco de código é melhor utilizar o 
+    loop for invés do while */
+
+        for (estado1; estado2; estado3) {
+            // Bloco de código a ser executado
+        }
+
+    // O estado 1 é executado (Uma vez) antes da execução do bloco de código
+    // O estado 2 define a condição para executar o bloco de código
+    // O estado 3 é executado (todas as vezes) depois do bloco de código ser executado
+
+        for(int i = 0; i < 5 ; i++) {
+            System.out.println(i);
+        }
+        
+
+// Break em Java 
+
+    /* O break em java é usado para sair de um loop */
+
+        for (int i = 0; i < 10; i++) {
+            if (i == 4){
+                break;
+            }
+            System.out.println(i);
+        }
+
+// Continue em Java
+
+    /* O continue é util quando você deseja pular uma parte da iteração, 
+     * executando a proxima função do código.
+     */
+
+        for (int i = 0; i < 10; i++) {
+            if (i == 4) {
+                continue;
+            }
+            System.out.println(i);
+        }
+
+    }
+
+// Array (Lista) em Java
+
+    /* Arrays são usadas para guardar multiplos valores em uma unica variável, invés de declarar 
+     * uma variável para cada valor. Podemos declarar uma array da seguinte forma:
+     */
+
+        tipodavariavel[] nomedavariavel = {"elemento1", "elemento2", "elemento3"};
+
+    // Acessar os elementos de uma Array
+
+    /* Você pode acessar os elementos de uma array se referindo ao seu numero */
+
+        String[] carros = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(carros[0]);
+            // Saida: Volvo
+
+    //Trocar um elemento de uma array
+
+        String[] carros = {"Volvo", "BMW", "Ford", "Mazda"};
+        carros[0] = "Opel";
+        System.out.println(cars[0]);
+            // Agora a saida é opel invés de volvo
+
+    // Tamanho de uma array 
+
+    /* Usado para descobrir quantos elementos existem dentro em uma array */
+
+        String[] carros = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(carros.length);
+        // Saida: 4
+
+    // Loop dentro de uma array
+
+    /* Você pode criar um loop dentro de uma array através da função for e usar a
+    * propiedade length para especificar quantas vezes o loop deve rodar 
+    */
+
+        String[] carros = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (int i = 0; i < carros.length; i++) {
+            System.out.println(carros[i]);
+            // Saida: Cada elemento i da array carros
+        }
+    
+// Exemplos de utilização de Arrays
+
+    // Código para calcular a idade media de um grupo
+
+    int idades[] = {20, 22, 18, 35, 48, 26, 87, 70};
+
+    float media, soma = 0;
+
+    // Lê o tamanho da array
+    int tamanho = idades.length;
+
+    for (int i = 0; i < tamanho; i++) {
+        soma += idades[i];
+    }
+
+    media = soma / tamanho;
+
+    System.out.println("A idade media é: " + media);
+
+// Arrays multidimensionais (Matrizes)
+
+    /* Arrays multidimensionais são uteis quando se quer armazenar dados em forma de tabela/matriz, 
+    *  tendo linhas e colunas. Podemos criar uma array multidimensional da seguinte forma:
+    */
+
+    int [][] meusNumeros = { {1, 2, 3, 4}, {5, 6, 7}, {8, 9, 10, 11}};
+
+    /* a array fica da seguinte forma:
+     *  1, 2, 3, 4
+     *  5, 6, 7
+     *  8, 9, 10, 11
+     */
 
 
-}
+     // Acesssar elementos de uma matriz multidimensionais (Matrizes)
+
+     int [][] meusNumeros = {{1, 2, 3, 4}, {5, 6, 7}};
+     System.out.println(meusNumeros[1][2]); // Saida: 7
+
+     // Lembrando: a contagem inicia sempre de 0
+
+     // Trocar elementos de uma array multidimensional
+
+        int[][] meusNumeros = { {1, 2, 3, 4}, {5, 6, 7} };
+        meusNumeros[1][2] = 9;
+        System.out.println(meusNumeros[1][2]); // Saida será 9 inves de 7
+
+    // Loop dentro de uma Array multidimensional
+
+        int[][] meusNumeros = { {1, 2, 3, 4}, {5, 6, 7} };
+        for (int i = 0; i < meusNumeros.length; ++i) { // Enquanto i < numero de linhas da array i + 1
+          for (int j = 0; j < meusNumeros[i].length; ++j) { // Enquanti j < número de colunas da linha j + 1
+            System.out.println(meusNumeros[i][j]); // Saida : Cada elemento e coluna da matriz
+          }
+        }
+
+// Método
+
+    /*
+     * Um método é um bloco de código que roda quando é chamado, você pode passar dados, conhecidos como parâmetros
+     * para um método.
+     */
+
+    public class Main {
+        static void meuMetodo(){
+            // código para ser executado
+        }
+
+        public static void main(String[] args) {
+            meuMetodo();
+        }
+    }
